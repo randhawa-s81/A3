@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *  Name:           Samarjeet Randhawa 
  *  Class:          CS30S
  * 
- *  Assignment:     Assignment 3 
+ *  Assignment:     Assignment 3 inheritance
  * 
  *  Description:    driver code for assignment 3 inheritance 
  * 
@@ -44,42 +44,68 @@ public class driver {
         //PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("outfle.txt")));
 
         ArrayList <bankAccount> bank = new ArrayList<>(); 
-
+        
+        ProgrammingInfo PI = new ProgrammingInfo("A3 Inheritance"); 
+        System.out.println(PI.getBanner()); 
+        
         // ***** print banners *****
-
-        banner = "*****************************" + nl;
-        banner += "Name:        Samarjeet Randhawa " + nl;
-        banner += "Class:       CS30S" + nl;
-        banner += "Assignment:  A3 inheritance" + nl;
-        banner += "*****************************" + nl + nl;
-
-        System.out.println(banner);
-        //fout.print(banner);
-
+        
         // ***** Get Input *****
 
         // ***** Main Processing *****
 
         bankAccount ba = new bankAccount("Lewis", "Hamilton", 110000); 
+        System.out.println(ba); 
         savingAccount sa = new savingAccount("Michael", "Schumacher", 123000); 
+        System.out.println(sa); 
         chequingAccount ca = new chequingAccount("Aryton", "Senna", 80000); 
-
+        System.out.println(ca);
+        
+        System.out.println("-----------------------"); 
     
         //adding objects to arrayList 
         bank.add(ba); 
         bank.add(sa); 
         bank.add(ca);
-
-        for(bankAccount p: bank){
-            System.out.println(p.toString()); 
-        }
-
+        
+        //envoking some derived class method withdraw 
+        savingAccount saving = (savingAccount)bank.get(1); 
+        //withdrawing $20,000 
+        saving.withdraw(20000); 
+        //printing new info 
+        System.out.println(sa);
+        
+        //apply interest method
+        for(bankAccount b: bank){
+            
+            if( b instanceof savingAccount){
+                System.out.println("Interest is: " + sa.applyInterest()); 
+                System.out.println(sa); 
+            }// end if 
+        }// end for each 
+        
+        //envoking derevied class method cash cheque 
+        chequingAccount cashQ = (chequingAccount)bank.get(2); 
+        cashQ.cashCheque(90000); 
+        
+        System.out.println(ca); 
+        
+        //envoking some derived class method deposit
+        bankAccount account = (bankAccount)bank.get(0); 
+        account.deposit(20000); 
+        
+        //printing info 
+        System.out.println(ba); 
+        
+        
+        
+        
+        
         // ***** Print Formatted Output *****
 
         // ***** Closing Message *****
 
         System.out.println();
-        System.out.println("end of processing");
         //fout.println("End of Processing");
 
         // **** close io buffers *****

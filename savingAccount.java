@@ -2,7 +2,7 @@
  * Programmer:    Samarjeet Randhawa 
  * Class:  CS30S
  *
- * Assignment: A3 inheritance savings derivded class 
+ * Assignment: A3 inheritance savings derivded class
  *
  * Description: savings derived bank account class  
  ***********************************************************************/
@@ -57,8 +57,11 @@ public class savingAccount extends bankAccount {
     
     //apply interest method 
     public double applyInterest(){
-        this.currentBalance *= Interest; 
-        return currentBalance;
+        double a;
+        a = this.currentBalance * Interest; 
+        currentBalance += a; 
+        
+        return a;
     }// end apply interest method 
         
 } // end of public class

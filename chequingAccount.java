@@ -2,7 +2,7 @@
  * Programmer:    Samarjeet Randhawa 
  * Class:  CS30S
  *
- * Assignment: A3 inheritance 
+ * Assignment: A3 inheritance
  *
  * Description: chequing account derived class of bankAccount 
  ***********************************************************************/
