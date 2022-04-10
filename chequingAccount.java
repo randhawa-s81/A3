@@ -42,7 +42,7 @@ public class chequingAccount extends bankAccount{
     //*** Setters ***
     
     //*** other methods *** 
-    
+/* could be void or perhaps returh a String "overdraft message" rather than printing output here.*/    
     //cash cheque method 
     public double cashCheque(double cc){
         if(cc > this.currentBalance){
