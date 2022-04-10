@@ -45,6 +45,7 @@ public class savingAccount extends bankAccount {
     //*** other methods *** 
     
     //withdraw method 
+    /* could return a string of either an insufficient funds message or the new balance */
     public double withdraw(double w){
         if(this.currentBalance < w){
             System.out.println("insufficent balance, cannot proceed with transaction");
@@ -56,6 +57,7 @@ public class savingAccount extends bankAccount {
     }// end withdraw method
     
     //apply interest method 
+    /* void, don't return anything */
     public double applyInterest(){
         double a;
         a = this.currentBalance * Interest; 
