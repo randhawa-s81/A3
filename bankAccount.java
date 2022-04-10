@@ -128,7 +128,8 @@ public class bankAccount {
     }// end set current balance 
 
     //other methods // 
-
+/* toString() shouldn't include the balance
+otherwise it's the same as getInfo() */
     @Override 
     public String toString(){
         String st; 
@@ -136,7 +137,7 @@ public class bankAccount {
         st = getFirstName() + ", " + getLastName()+ ", " +getId()+", "+ getCurrentBalance();
         return st;
     }// end toString 
-
+/* don't include "balance:" here */
     public String getInfo(){
         String st; 
     
@@ -144,6 +145,8 @@ public class bankAccount {
         return st; 
     }// end get info
 
+    /*deposit should be void not returning a double
+    it is, in essence a setter*/
     public double deposit(double d){
         this.currentBalance += d; 
         //double amount = 0.0; 
