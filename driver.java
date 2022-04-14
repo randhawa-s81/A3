@@ -78,8 +78,8 @@ public class driver {
         //apply interest method
         for(bankAccount b: bank){
             
-            if( b instanceof savingAccount){
-                System.out.println("Interest is: " + sa.applyInterest()); 
+            if(b instanceof savingAccount){
+                //System.out.println("Interest is: " + sa.applyInterest()); 
                 System.out.println(sa); 
             }// end if 
         }// end for each 
@@ -96,11 +96,7 @@ public class driver {
         
         //printing info 
         System.out.println(ba); 
-        
-        
-        
-        
-        
+    
         // ***** Print Formatted Output *****
 
         // ***** Closing Message *****

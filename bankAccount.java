@@ -133,21 +133,21 @@ public class bankAccount {
     public String toString(){
         String st; 
 
-        st = getFirstName() + ", " + getLastName()+ ", " +getId()+", "+ getCurrentBalance();
+        st = getFirstName() + ", " + getLastName()+ ", " +getId();
         return st;
     }// end toString 
 
+    //toString 
     public String getInfo(){
         String st; 
     
-        st = getLastName() +" " + getFirstName() + "," + getId() + "balance: " + getCurrentBalance();
+        st = getLastName() +" " + getFirstName() + "," + getId() + ", " + getCurrentBalance(); 
         return st; 
     }// end get info
 
-    public double deposit(double d){
+    public void deposit(double d){
         this.currentBalance += d; 
         //double amount = 0.0; 
-        //currentBalance += amount; 
-        return this.currentBalance;  
+        //currentBalance += amount;   
     }// end deposit
 } // end of public class

@@ -53,6 +53,8 @@ public class chequingAccount extends bankAccount{
             currentBalance -= cc - fee; 
         }// end else 
         return this.currentBalance; 
+    
     }// end cash cheque 
+    
 
 } // end of public class

@@ -56,12 +56,14 @@ public class savingAccount extends bankAccount {
     }// end withdraw method
     
     //apply interest method 
-    public double applyInterest(){
+    public void applyInterest(){
         double a;
         a = this.currentBalance * Interest; 
         currentBalance += a; 
-        
-        return a;
+    }// end apply interest method 
+    
+    public void applyInterest1(double a){
+        this.currentBalance = a * Interest;   
     }// end apply interest method 
         
 } // end of public class
